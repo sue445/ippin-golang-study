@@ -4,20 +4,20 @@ import (
 	"testing"
 )
 
+func AssertEquals(expect, actual, t *testing.T){
+	if expect != actual {
+		t.Errorf("%s != %s", expect, actual)
+	}
+}
+
 func TestDouble(t *testing.T){
 	param := 1
 	result := Double(param)
-
-	if result != 2 {
-		t.Errorf("Double(%d) = %d, want %d", param, result, 2)
-	}
+	AssertEquals(2, result, t)
 }
 
 func TestDouble2(t *testing.T){
 	param := 2
 	result := Double(param)
-
-	if result != 4 {
-		t.Errorf("Double(%d) = %d, want %d", param, result, 4)
-	}
+	AssertEquals(4, result, t)
 }

@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func AssertEquals(expect, actual, t *testing.T){
+func AssertEquals(expect interface {}, actual interface {}, t *testing.T){
 	if expect != actual {
 		t.Errorf("%s != %s", expect, actual)
 	}

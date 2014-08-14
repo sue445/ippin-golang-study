@@ -9,5 +9,5 @@ func main(){
 }
 
 func Double(i int) int {
-	return 2
+	return i * 2
 }

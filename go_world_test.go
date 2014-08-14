@@ -12,3 +12,12 @@ func TestDouble(t *testing.T){
 		t.Errorf("Double(%d) = %d, want %d", param, result, 2)
 	}
 }
+
+func TestDouble2(t *testing.T){
+	param := 2
+	result := Double(param)
+
+	if result != 4 {
+		t.Errorf("Double(%d) = %d, want %d", param, result, 4)
+	}
+}
